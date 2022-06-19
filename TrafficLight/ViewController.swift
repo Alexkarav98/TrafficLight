@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     }
 }
 
-enum buttonName: String {
+private enum buttonName: String {
     case START = "START"
     case NEXT = "NEXT"
 }
@@ -66,6 +66,15 @@ enum buttonName: String {
 extension ViewController {
     enum CurrentLightColor {
         case red, yellow, green
+    }
+}
+
+extension UIView {
+    func makeCircular () {
+        let center:CGPoint = self.center
+        self.layer.cornerRadius = min(self.frame.size.height,
+                                      self.frame.size.width) / 2.0
+        self.center = center
     }
 }
 
