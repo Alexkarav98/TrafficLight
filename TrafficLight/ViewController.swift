@@ -63,11 +63,10 @@ private enum buttonName: String {
     case NEXT = "NEXT"
 }
 
-extension ViewController {
-    enum CurrentLightColor {
-        case red, yellow, green
-    }
+enum CurrentLightColor {
+    case red, yellow, green
 }
+
 
 extension UIView {
     func makeCircular () {
